@@ -1,21 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { Text, View, Button } from 'react-native';
+import Welcome from './screens/welcome'
+
+import { mainStyles } from './styles/mainStyles';
+
 
 export default function App() {
+  const [name, setName] = useState('mibadura');
+  const [person, setPerson] = useState({name: 'Kasia', personality: 'amazing'})
+
+  const clickHandler = () => {
+    setName('a cool dude');
+    setPerson({name: 'The Boring Dude', personality: 'boring'});
+  }
+  
   return (
-    <View style={styles.container}>
-      <Text>This is a test message to test the on-the-run refresh.</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <Welcome/>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
