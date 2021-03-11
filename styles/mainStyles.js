@@ -15,7 +15,6 @@ const vintagePalette = {"Antique Brass":"#cb997e","Desert Sand":"#ddbea9","Champ
 export const mainStyles = StyleSheet.create({
     welcomeContainer: {
         flex: 1,
-        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: vintagePalette.Ebony
@@ -26,12 +25,20 @@ export const mainStyles = StyleSheet.create({
     logo: {
         fontSize: 64,
         padding: 40,
+        textAlign: 'center',
         color: vintagePalette['Champagne Pink']
     },
     slogan: {
         fontSize: 20,
         padding: 20,
-        color: vintagePalette['Champagne Pink']
+        textAlign: 'center',
+        color: vintagePalette['Champagne Pink'],
+    },
+    mainScreenContainer: {
+        backgroundColor: vintagePalette.Ebony,
+    },
+    settingsScreenContainer: {
+        backgroundColor: vintagePalette.Artichoke,
     }
 
 });
