@@ -1,15 +1,33 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-import mainScreen from '../screens/mainScreen';
+import homeScreen from '../screens/homeScreen';
 import settingsScreen from '../screens/settingsScreen';
+import welcomeScreen from '../screens/welcomeScreen'
+
 
 const screens = {
+    WelcomeScreen: {
+        screen: welcomeScreen,
+        navigationOptions: {
+            headerShown: false,
+            title: 'Welcome!'
+        }
+    },
     HomeScreen: {
-        screen: mainScreen
+        screen: homeScreen,
+        navigationOptions: {
+            title: 'Your Home Screen'
+        }
+
     },
     SettingsScreen: {
-        screen: settingsScreen
-    }
+        screen: settingsScreen,
+        navigationOptions: {
+            title: 'Settings'
+        }
+    },
+    
+    
 }
 
 const HomeStack = createStackNavigator(screens);

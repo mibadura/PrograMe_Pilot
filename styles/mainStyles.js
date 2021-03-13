@@ -34,11 +34,28 @@ export const mainStyles = StyleSheet.create({
         textAlign: 'center',
         color: vintagePalette['Champagne Pink'],
     },
-    mainScreenContainer: {
+    homeScreenContainer: {
         backgroundColor: vintagePalette.Ebony,
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        
     },
     settingsScreenContainer: {
         backgroundColor: vintagePalette.Artichoke,
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    homeScreenText: {
+        fontSize: 64,
+        color: vintagePalette['Antique Brass'],
+        textAlign: 'center',
+    },
+    settingsScreenText: {
+        fontSize: 64,
+        color: 'black',
+        textAlign: 'center',
     }
 
 });
