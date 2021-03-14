@@ -2,21 +2,19 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import homeScreen from '../screens/homeScreen';
 import settingsScreen from '../screens/settingsScreen';
-import welcomeScreen from '../screens/welcomeScreen'
-
+import welcomeScreen from '../screens/welcomeScreen';
+import Header from '../shared/header';
+import React from 'react';
+import { vintagePalette } from '../styles/mainStyles'
 
 const screens = {
-    WelcomeScreen: {
-        screen: welcomeScreen,
-        navigationOptions: {
-            headerShown: false,
-            title: 'Welcome!'
-        }
-    },
+    
     HomeScreen: {
         screen: homeScreen,
-        navigationOptions: {
-            title: 'Your Home Screen'
+        navigationOptions: ({ navigation }) => {
+            return {
+                headerTitle: () => <Header navigation={navigation} title='Your Pilot' />
+            }
         }
 
     },
@@ -26,10 +24,20 @@ const screens = {
             title: 'Settings'
         }
     },
-    
+    WelcomeScreen: {
+        screen: welcomeScreen,
+        navigationOptions: {
+            headerShown: false,
+        }
+    },
     
 }
 
-const HomeStack = createStackNavigator(screens);
+const HomeStack = createStackNavigator(screens, {
+    defaultNavigationOptions: {
+        headerTintColor: '#333',
+        headerStyle: { backgroundColor: vintagePalette.Artichoke, height: 60}
+    }
+});
 
-export default createAppContainer(HomeStack);
+export default HomeStack;

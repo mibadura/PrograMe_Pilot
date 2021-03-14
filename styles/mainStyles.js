@@ -10,7 +10,7 @@ const nicePalette = {"Phthalo Green":"#14281d","Hunter Green":"#355834","Antique
 const betterPalette = {"Black Olive":"#3b3e3b","Honey Yellow":"#f7b32b","Asparagus":"#88ab75","Vermilion":"#cd5334",
 "Terra Cotta":"#d6745c","Ruby Red":"#a41623","Sky Blue":"#8ec9e0","Eggshell":"#f2edd7","Battleship Grey":"#818881"}
 
-const vintagePalette = {"Antique Brass":"#cb997e","Desert Sand":"#ddbea9","Champagne Pink":"#ffe8d6","Ash Gray":"#b7b7a4","Artichoke":"#a5a58d","Ebony":"#6b705c"}
+export const vintagePalette = {"Antique Brass":"#cb997e","Desert Sand":"#ddbea9","Champagne Pink":"#ffe8d6","Ash Gray":"#b7b7a4","Artichoke":"#a5a58d","Ebony":"#6b705c"}
 
 export const mainStyles = StyleSheet.create({
     welcomeContainer: {
@@ -56,6 +56,28 @@ export const mainStyles = StyleSheet.create({
         fontSize: 64,
         color: 'black',
         textAlign: 'center',
+    },
+    topBar: {
+        padding: 20,
+        backgroundColor: 'red',
+        
+    },
+    header: {
+        width: '100%',
+        height: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    headerText: {
+        fontWeight: 'bold',
+        fontSize: 20,
+        color: '#333',
+        letterSpacing: 1
+    },
+    icon: {
+        position: 'absolute',
+        left: 8
     }
 
 });
