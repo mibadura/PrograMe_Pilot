@@ -49,7 +49,7 @@ export const mainStyles = StyleSheet.create({
     },
     homeScreenText: {
         fontSize: 64,
-        color: vintagePalette['Antique Brass'],
+        color: '#333',
         textAlign: 'center',
     },
     settingsScreenText: {
@@ -78,6 +78,33 @@ export const mainStyles = StyleSheet.create({
     icon: {
         position: 'absolute',
         left: 8
+    },
+    cardContainer: {
+
+        borderRadius: 6,
+        elevation: 3,
+        backgroundColor: vintagePalette['Ash Gray'],
+        shadowOffset: { width: 1, height: 1 },
+        shadowColor: '#333',
+        shadowOpacity: 0.5,
+        shadowRadius: 2,
+        marginHorizontal: 4,
+        marginVertical: 6,
+        borderWidth: 2,
+        borderStyle: 'dashed'
+    },
+    cardContent: {
+        marginHorizontal: 18,
+        marginVertical: 10
+    },
+    secondHeader: {
+        backgroundColor: vintagePalette['Antique Brass'],
+        height: 60,
+        width: '100%',
+        marginBottom: 6,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 
 });
